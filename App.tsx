@@ -11,6 +11,8 @@ import AboutPage from './pages/AboutPage';
 import CertificatesPage from './pages/CertificatesPage';
 import PostPage from './pages/PostPage';
 
+import ScrollToTop from './components/ScrollToTop';
+
 // Main App Layout
 const App: React.FC = () => {
   // Theme Management
@@ -41,7 +43,9 @@ const App: React.FC = () => {
       document.documentElement.classList.remove('dark');
     }
     // Save to localStorage
-    localStorage.setItem('theme', theme);
+    if (typeof window !== 'undefined') {
+       localStorage.setItem('theme', theme);
+    }
   }, [theme]);
 
   const toggleTheme = () => {
@@ -50,6 +54,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col font-sans transition-colors duration-300">
+      <ScrollToTop />
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="flex-grow pt-8 pb-16">
         <Routes>
