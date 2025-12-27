@@ -2,7 +2,7 @@ import React from "react";
 import usePageTitle from "../hooks/usePageTitle";
 
 const AboutPage: React.FC = () => {
-  usePageTitle("Về mình | Nhật Cường Dev");
+  usePageTitle("Về mình Trần Anh Tú");
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-12 animate-fade-in space-y-12">
@@ -10,7 +10,7 @@ const AboutPage: React.FC = () => {
       <section className="text-center space-y-6" data-aos="fade-up">
         <img
           src="/avatar.png"
-          alt="Nhật Cường Dev"
+          alt="TranAnhTuBlog"
           className="w-80 h-auto rounded-2xl mx-auto shadow-lg ring-4 ring-white dark:ring-dark-bg object-cover"
         />
         <h1
@@ -69,9 +69,9 @@ const AboutPage: React.FC = () => {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          Chào mừng bạn đến với blog của mình! Mình là Cường, một lập trình viên
+          Chào mừng bạn đã đến với blog của mình! Mình là Trần Anh Tú, một lập trình viên
           trẻ với niềm đam mê cháy bỏng dành cho công nghệ. Sinh ra và lớn lên
-          tại mảnh đất Phú Yên đầy nắng và gió, mình mang trong mình sự kiên trì
+          tại mảnh đất Nha Trang với nhiều chông gai và thử thách, mình mang trong mình sự kiên trì
           và khát khao chinh phục những thử thách mới trong thế giới lập trình.
         </p>
       </section>
@@ -274,7 +274,7 @@ const AboutPage: React.FC = () => {
                   Chơi Game
                 </span>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
-                  Giải trí và tìm kiếm nguồn cảm hứng sáng tạo từ thế giới ảo.
+                  Giải trí sau những giờ học và làm việc căng thẳng.
                 </span>
               </div>
             </li>
@@ -287,8 +287,8 @@ const AboutPage: React.FC = () => {
                   Đọc truyện
                 </span>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
-                  Thả hồn vào những câu chuyện thú vị và những thế giới giả
-                  tưởng.
+                  Giúp mình tìm được nhiều cảm hứng hơn trong việc sáng tạo nội
+                  dung.
                 </span>
               </div>
             </li>
@@ -301,7 +301,7 @@ const AboutPage: React.FC = () => {
                   Xem phim
                 </span>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
-                  Học hỏi cách kể chuyện và tận hưởng nghệ thuật điện ảnh.
+                  Một cách để rèn luyện tiếng anh và những thứ tiếng khác.
                 </span>
               </div>
             </li>
@@ -311,10 +311,10 @@ const AboutPage: React.FC = () => {
               </span>
               <div>
                 <span className="block font-bold text-gray-900 dark:text-white mb-1">
-                  Du lịch
+                  Ngủ
                 </span>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
-                  Xách balo lên và đi, khám phá những vùng đất và văn hóa mới.
+                  Lấy lại năng lượng đã mất, giúp mình khỏe hơn.
                 </span>
               </div>
             </li>
@@ -366,12 +366,12 @@ const AboutPage: React.FC = () => {
                   Facebook
                 </h3>
                 <a
-                  href="https://www.facebook.com/NhatCuong1208/"
+                  href="https://www.facebook.com/tran.tu.558725"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg font-semibold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
-                  NhatCuong1208
+                  Anh Tú Trần
                 </a>
               </div>
             </div>
@@ -402,7 +402,7 @@ const AboutPage: React.FC = () => {
                   Số điện thoại
                 </h3>
                 <a
-                  href="tel:0824503820"
+                  href="tel:084743164"
                   className="text-lg font-semibold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
                   0824503820
@@ -436,10 +436,10 @@ const AboutPage: React.FC = () => {
                   Email
                 </h3>
                 <a
-                  href="mailto:daonhatcuong2004@gmail.com"
+                  href="mailto:mkania369@gmail.com"
                   className="text-lg font-semibold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors truncate block"
                 >
-                  daonhatcuong2004@gmail.com
+                  mkania369@gmail.com
                 </a>
               </div>
             </div>
@@ -468,12 +468,12 @@ const AboutPage: React.FC = () => {
                   GitHub
                 </h3>
                 <a
-                  href="https://github.com/Dex-NCuong"
+                  href="https://github.com/Shinjiiiiiiiii/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg font-semibold text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
-                  Dex-NCuong
+                  Shinjiiiiiiiii
                 </a>
               </div>
             </div>
