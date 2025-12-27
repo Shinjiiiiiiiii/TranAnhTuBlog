@@ -1,51 +1,91 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { blogPosts } from '../data/posts';
+import CodeBlock from './CodeBlock';
 
-interface CodeBlockProps {
-  code: string;
-  language?: string;
-}
+const BlogPostDetail: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+  const post = blogPosts.find((p) => p.id === id);
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ code, language = 'javascript' }) => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  if (!post) return <div className="text-center py-20">Bài viết không tồn tại.</div>;
 
   return (
-    <div className="my-6 rounded-xl overflow-hidden bg-[#1e1e1e] border border-gray-800 shadow-xl">
-      <div className="flex justify-between items-center px-4 py-2 bg-[#252526] border-b border-gray-800">
-        <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 rounded-full bg-red-500"></div>
-          <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-          <div className="w-3 h-3 rounded-full bg-green-500"></div>
-          <span className="ml-2 text-xs text-gray-400 font-mono lowercase">{language}</span>
+    <article className="max-w-4xl mx-auto px-4 py-12 animate-fade-in">
+      {/* Header bài viết */}
+      <header className="mb-12 text-center">
+        <div className="flex justify-center gap-2 mb-4">
+          {post.tags.map(tag => (
+            <span key={tag} className="text-xs font-bold uppercase tracking-widest text-primary-500 bg-primary-500/10 px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))}
         </div>
-        <button 
-          onClick={handleCopy}
-          className="text-gray-400 hover:text-white transition-colors"
-          title="Copy code"
-        >
-          {copied ? (
-             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-green-500" viewBox="0 0 20 20" fill="currentColor">
-               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-             </svg>
-          ) : (
-             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-             </svg>
-          )}
-        </button>
+        <h1 className="text-4xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-tight">
+          {post.title}
+        </h1>
+        <div className="flex items-center justify-center text-gray-500 dark:text-gray-400 font-medium">
+          <span>{post.date}</span>
+          <span className="mx-3">•</span>
+          <span>{post.readTime} đọc</span>
+        </div>
+      </header>
+
+      {/* Render nội dung động */}
+      <div className="space-y-8 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+        {post.blocks.map((block, index) => {
+          switch (block.type) {
+            case 'heading':
+              return (
+                <h2 key={index} className="text-3xl font-bold text-gray-900 dark:text-white pt-4">
+                  {block.content}
+                </h2>
+              );
+
+            case 'paragraph':
+              return <p key={index}>{block.content}</p>;
+
+            case 'code':
+              return (
+                <CodeBlock 
+                  key={index} 
+                  code={block.content as string} 
+                  language={block.language} 
+                />
+              );
+
+            case 'list':
+              return (
+                <ul key={index} className="list-none space-y-4 ml-4">
+                  {(block.content as string[]).map((item, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="text-primary-500 mr-3 mt-1.5">
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              );
+
+            case 'tip':
+              return (
+                <div key={index} className="p-6 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl italic">
+                  <span className="font-bold text-amber-600 dark:text-amber-400 not-italic block mb-2 uppercase tracking-wider text-sm">
+                    💡 Mẹo nhỏ:
+                  </span>
+                  {block.content}
+                </div>
+              );
+
+            default:
+              return null;
+          }
+        })}
       </div>
-      <div className="p-4 overflow-x-auto">
-        <pre className="font-mono text-sm leading-relaxed text-[#d4d4d4]">
-          <code>{code}</code>
-        </pre>
-      </div>
-    </div>
+    </article>
   );
 };
 
-export default CodeBlock;
+export default BlogPostDetail;
