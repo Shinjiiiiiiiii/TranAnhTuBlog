@@ -389,18 +389,6 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer Quote */}
-      <section className="bg-gradient-to-r from-primary-600 to-indigo-600 rounded-2xl p-8 text-white text-center shadow-lg transform hover:scale-[1.02] transition-transform">
-        <blockquote className="text-xl italic font-medium opacity-90 relative">
-          <span className="text-4xl absolute -top-4 -left-2 opacity-50">"</span>
-          Code không chỉ là công việc, nó là cách mình giao tiếp với thế giới và
-          hiện thực hóa những ý tưởng.
-          <span className="text-4xl absolute -bottom-8 -right-2 opacity-50">
-            "
-          </span>
-        </blockquote>
-      </section>
     </div>
   );
 };
