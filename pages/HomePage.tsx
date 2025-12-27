@@ -11,16 +11,16 @@ const HomePage: React.FC = () => {
     <div className="space-y-12 animate-fade-in">
       {/* Hero Section */}
       <section
-        className="text-center py-20 px-100 bg-gradient-to-b from-transparent to-gray-50 dark:to-dark-card/30 rounded-3xl mx-4 sm:mx-0"
+        className="text-center py-24 px-4 bg-gradient-to-b from-blackpure to-blackpure/95 rounded-3xl mx-4 sm:mx-0"
         data-aos="fade-up"
       >
         <h1
-          className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-6"
+          className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           Cách Học{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600 animate-gradient">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purpledeep to-purplehover">
             JavaScript
           </span>{" "}
           mà không phải khổ sở đau đầu.
@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
           data-aos-delay="200"
         >
           Chào các bạn, mình là{" "}
-          <span className="font-semibold text-gray-900 dark:text-white">
+          <span className="font-semibold text-white">
             Trần Anh Tú
           </span>
           . Đây sẽ là Blog chia sẽ những kình nghiệm học IT của mình,
@@ -44,13 +44,13 @@ const HomePage: React.FC = () => {
         >
           <a
             href="#posts"
-            className="px-8 py-4 rounded-full bg-primary-600 text-white font-bold text-lg hover:bg-primary-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-600/40"
+            className="px-8 py-4 rounded-full bg-purpledeep text-white font-bold text-lg hover:bg-purplehover transition-all transform hover:scale-105 shadow-lg hover:shadow-purpledeep/40"
           >
             Bắt đầu đọc
           </a>
           <Link
             to="/about#contact"
-            className="px-8 py-4 rounded-full bg-white text-gray-800 border border-gray-200 dark:bg-gray-800 dark:text-white dark:border-gray-700 font-bold text-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all transform hover:scale-105 shadow-sm"
+            className="px-8 py-4 rounded-full bg-blackpure text-white border border-gray-700 font-bold text-lg hover:bg-gray-900 transition-all transform hover:scale-105"
           >
             Liên hệ
           </Link>
@@ -60,12 +60,12 @@ const HomePage: React.FC = () => {
       {/* Blog Grid */}
       <section
         id="posts"
-        className="max-w-6xl mx-auto px-4 sm:px-6 pb-12"
+        className="max-w-6xl mx-auto px-4 sm:px-6 pb-12 bg-blackpure"
         data-aos="fade-up"
       >
         <div className="flex items-end justify-between mb-10 border-b border-gray-200 dark:border-gray-800 pb-4">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+            <h2 className="text-3xl font-bold text-white">
               Bài viết mới nhất
             </h2>
             <p className="text-gray-500 dark:text-gray-400 mt-2">
@@ -86,7 +86,7 @@ const HomePage: React.FC = () => {
         <div className="text-center">
           <Link
             to="/blog"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary-600 hover:bg-primary-700 md:text-lg md:px-10 transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center px-8 py-3 rounded-full text-white bg-purpledeep hover:bg-purplehover shadow-md hover:shadow-purpledeep/40"
           >
             Xem tất cả bài viết
             <svg
