@@ -5,7 +5,7 @@ import { blogPosts } from "../data/posts";
 import usePageTitle from "../hooks/usePageTitle";
 
 const HomePage: React.FC = () => {
-  usePageTitle("Nhật Cường Dev | JavaScript Tech Blog");
+  usePageTitle("JavaScript Tech Blog");
 
   return (
     <div className="space-y-12 animate-fade-in">
@@ -30,12 +30,12 @@ const HomePage: React.FC = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Chào bạn, mình là{" "}
+          Chào các bạn, mình là{" "}
           <span className="font-semibold text-gray-900 dark:text-white">
-            Nhật Cường Dev
+            Trần Anh Tú
           </span>
-          . Blog này là nơi mình chia sẻ những kinh nghiệm thực chiến về JS,
-          giúp bạn đi từ Zero đến Hero.
+          . Đây sẽ là Blog chia sẽ những kình nghiệm học IT của mình,
+           mong là sẽ giúp được các bạn hoàn thiện hơn.
         </p>
         <div
           className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4"
