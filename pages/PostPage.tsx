@@ -12,10 +12,10 @@ const PostPage: React.FC = () => {
     const foundPost = blogPosts.find((p) => p.id === id);
     if (foundPost) {
       setPost(foundPost);
-      document.title = `${foundPost.title} | Nhật Cường Dev`;
+      document.title = `${foundPost.title} | Trần Anh Tú`;
       window.scrollTo(0, 0);
     } else {
-      document.title = "Không tìm thấy trang | Nhật Cường Dev";
+      document.title = "Không tìm thấy trang";
     }
   }, [id]);
 
@@ -109,7 +109,7 @@ const PostPage: React.FC = () => {
             <div className="w-5 h-5 bg-primary-600 rounded-full flex items-center justify-center text-[10px] text-white font-bold mr-1.5">
               C
             </div>
-            Bởi Nhật Cường Dev
+            Bởi Trần Anh Tú
           </span>
         </div>
       </div>
