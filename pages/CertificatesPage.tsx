@@ -11,7 +11,7 @@ interface Certificate {
 }
 
 const CertificatesPage: React.FC = () => {
-  usePageTitle("Chứng chỉ & Thành tựu | Nhật Cường Dev");
+  usePageTitle("Chứng chỉ & Thành tựu");
 
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
 
@@ -81,8 +81,7 @@ const CertificatesPage: React.FC = () => {
           Chứng chỉ & Thành tựu
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Những cột mốc quan trọng đánh dấu sự nỗ lực và phát triển của mình
-          trên con đường chinh phục công nghệ. Click vào từng chứng chỉ để xem
+          Click vào từng chứng chỉ để xem
           chi tiết.
         </p>
       </div>
