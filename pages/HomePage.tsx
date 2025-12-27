@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
     <div className="space-y-12 animate-fade-in">
       {/* Hero Section */}
       <section
-        className="text-center py-20 px-4 bg-gradient-to-b from-transparent to-gray-50 dark:to-dark-card/30 rounded-3xl mx-4 sm:mx-0"
+        className="text-center py-20 px-20 bg-gradient-to-b from-transparent to-gray-50 dark:to-dark-card/30 rounded-3xl mx-4 sm:mx-0"
         data-aos="fade-up"
       >
         <h1
@@ -19,11 +19,11 @@ const HomePage: React.FC = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          Học{" "}
+          Cách Học{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600 animate-gradient">
             JavaScript
           </span>{" "}
-          không khó.
+          mà không phải khổ sở đau đầu.
         </h1>
         <p
           className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8"
