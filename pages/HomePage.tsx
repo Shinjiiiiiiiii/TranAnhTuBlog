@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
     <div className="space-y-12 animate-fade-in">
       {/* Hero Section */}
       <section
-        className="text-center py-20 px-20 bg-gradient-to-b from-transparent to-gray-50 dark:to-dark-card/30 rounded-3xl mx-4 sm:mx-0"
+        className="text-center py-20 px-100 bg-gradient-to-b from-transparent to-gray-50 dark:to-dark-card/30 rounded-3xl mx-4 sm:mx-0"
         data-aos="fade-up"
       >
         <h1
