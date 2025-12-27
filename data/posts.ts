@@ -255,18 +255,18 @@ processData("File ảnh", () => {
         type: "code",
         language: "javascript",
         content: `const user = {
-  name: "Nhật Cường",
+  name: "Anh Tú",
   age: 20,
   skills: ["JS", "React"],
   address: {
-    city: "Tuy Hòa",
+    city: "Khánh Hòa",
     country: "VN"
   }
 };
 
 // Lấy dữ liệu và đổi tên biến nếu cần
 const { name, age, address: { city } } = user;
-console.log(name, city); // "Nhật Cường", "Tuy Hòa"`,
+console.log(name, city); // "Anh Tú", "Khánh Hòa"`,
       },
       {
         type: "heading",
