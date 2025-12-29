@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -36,6 +36,12 @@ const App: React.FC = () => {
       offset: 100,
     });
   }, []);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    AOS.refresh();
+  }, [location]);
 
   useEffect(() => {
     if (theme === 'dark') {
