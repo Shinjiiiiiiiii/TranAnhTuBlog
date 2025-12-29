@@ -6,9 +6,10 @@ export const blogPosts: BlogPost[] = [
     title: "JavaScript là gì? Vì sao mọi developer đều nên học JS",
     excerpt:
       "Nếu ví HTML là bộ khung, CSS là lớp sơn, thì JavaScript chính là linh hồn của website. Cùng tìm hiểu xem ngôn ngữ này bá đạo thế nào nhé.",
-    date: "2023-10-01",
+    date: "2025-12-01",
     readTime: "10 phút",
     tags: ["Basic", "Introduction"],
+    image: "/images/blog/post-intro-js.png",
     blocks: [
       {
         type: "heading",
@@ -76,9 +77,10 @@ console.log('Website đã được cập nhật!');`,
     title: "Biến, kiểu dữ liệu và cách JavaScript hoạt động phía sau",
     excerpt:
       "Var, let, const khác gì nhau? Hoisting là cái quái gì? Hiểu rõ những thứ cơ bản này để tránh bug ngớ ngẩn sau này.",
-    date: "2023-10-03",
+    date: "2025-12-03",
     readTime: "12 phút",
     tags: ["Fundamentals", "Variables"],
+    image: "/images/blog/post-variables.png",
     blocks: [
       {
         type: "heading",
@@ -150,9 +152,10 @@ let b = 10;`,
     title: "Hàm trong JavaScript: Arrow Function, Callback và Best Practice",
     excerpt:
       "Viết hàm thế nào cho gọn? Arrow Function có gì hay ho mà ai cũng dùng? Cùng clean code với function nhé.",
-    date: "2023-10-05",
+    date: "2025-12-05",
     readTime: "10 phút",
     tags: ["Functions", "ES6"],
+    image: "/images/blog/post-functions.png",
     blocks: [
       {
         type: "paragraph",
@@ -238,9 +241,10 @@ processData("File ảnh", () => {
     title: "Array & Object: Cách xử lý dữ liệu hiệu quả trong JS",
     excerpt:
       "Destructuring, Spread Operator, Map, Filter, Reduce... Những vũ khí hạng nặng giúp bạn xử lý dữ liệu như một senior.",
-    date: "2023-10-08",
+    date: "2025-12-08",
     readTime: "15 phút",
     tags: ["Data Structures", "ES6"],
+    image: "/images/blog/post-array-object.png",
     blocks: [
       {
         type: "heading",
@@ -328,9 +332,10 @@ const userUpdate = { ...user, age: 21 }; // Copy user cũ và sửa age`,
     title: "Asynchronous JavaScript: Promise, async/await dễ hiểu",
     excerpt:
       "Xử lý bất đồng bộ không còn là ác mộng nếu bạn hiểu rõ Promise và Async/Await. Tạm biệt Callback Hell!",
-    date: "2023-10-12",
+    date: "2025-12-12",
     readTime: "14 phút",
     tags: ["Async", "Advanced"],
+    image: "/images/blog/post-async-promise.png",
     blocks: [
       {
         type: "heading",
@@ -414,9 +419,10 @@ app();`,
     title: "DOM là gì? Cách JavaScript tương tác với HTML",
     excerpt:
       "DOM (Document Object Model) là cầu nối giữa code JS và giao diện người dùng. Học cách thao tác DOM thuần thục.",
-    date: "2023-10-15",
+    date: "2025-12-15",
     readTime: "10 phút",
     tags: ["DOM", "Web API"],
+    image: "/images/blog/post-dom.png",
     blocks: [
       {
         type: "heading",
@@ -484,9 +490,10 @@ newDiv.remove();`,
     title: "Event, Event Loop và những lỗi người mới hay gặp",
     excerpt:
       "Cơ chế Event Loop hoạt động ra sao? Tại sao setTimeout 0 lại chạy sau cùng? Giải mã bí ẩn cốt lõi của JS.",
-    date: "2023-10-18",
+    date: "2025-12-15",
     readTime: "15 phút",
     tags: ["Deep Dive", "Concept"],
+    image: "/images/blog/post-event-loop.png",
     blocks: [
       {
         type: "heading",
@@ -545,9 +552,10 @@ document.querySelector('#parent').addEventListener('click', () => {
     title: "ES6+ có gì hay? Những cú pháp giúp code gọn và sạch hơn",
     excerpt:
       "Template Literals, Optional Chaining, Nullish Coalescing... Nâng cấp code của bạn lên tầm cao mới.",
-    date: "2023-10-21",
+    date: "2025-12-21",
     readTime: "8 phút",
     tags: ["Modern JS", "Tips"],
+    image: "/images/blog/post-es6-plus.png",
     blocks: [
       {
         type: "heading",
@@ -613,9 +621,10 @@ const html = \`
     title: "Lộ trình học JavaScript để đi làm Front-end / Full-stack",
     excerpt:
       "Học xong cơ bản rồi thì làm gì tiếp theo? Đây là tấm bản đồ kho báu dành cho bạn.",
-    date: "2023-10-25",
+    date: "2025-12-25",
     readTime: "10 phút",
     tags: ["Career", "Roadmap"],
+    image: "/images/blog/post-roadmap.png",
     blocks: [
       {
         type: "heading",

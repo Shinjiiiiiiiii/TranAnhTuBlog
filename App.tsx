@@ -10,6 +10,7 @@ import BlogPage from './pages/BlogPage';
 import AboutPage from './pages/AboutPage';
 import CertificatesPage from './pages/CertificatesPage';
 import PostPage from './pages/PostPage';
+import ProjectPage from './pages/ProjectPage';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -63,6 +64,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/certificates" element={<CertificatesPage />} />
           <Route path="/post/:id" element={<PostPage />} />
+          <Route path="/project/:id" element={<ProjectPage />} />
         </Routes>
       </main>
       <Footer />

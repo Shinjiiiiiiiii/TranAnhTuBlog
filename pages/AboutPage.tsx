@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import usePageTitle from "../hooks/usePageTitle";
+import { projects } from "../data/projects";
 
 const AboutPage: React.FC = () => {
   usePageTitle("Về mình | Nhật Cường Dev");
@@ -11,7 +13,7 @@ const AboutPage: React.FC = () => {
         <img
           src="/avatar.png"
           alt="Nhật Cường Dev"
-          className="w-80 h-auto rounded-2xl mx-auto shadow-lg ring-4 ring-white dark:ring-dark-bg object-cover"
+          className="w-48 h-auto rounded-2xl mx-auto shadow-lg ring-4 ring-white dark:ring-dark-bg object-cover"
         />
         <h1
           className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white"
@@ -173,37 +175,10 @@ const AboutPage: React.FC = () => {
           Dự án cá nhân
         </h2>
         <div className="grid sm:grid-cols-2 gap-6">
-          {[
-            {
-              name: "Studyqna",
-              desc: "Hệ thống hỏi đáp học tập trực tuyến",
-              link: "https://github.com/Dex-NCuong/DoAnChuyenNganh",
-              color: "bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400",
-            },
-            {
-              name: "Web Đọc Truyện",
-              desc: "Website đọc truyện tranh online",
-              link: "https://github.com/Dex-NCuong/DoAn",
-              color: "bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400",
-            },
-            {
-              name: "App Đếm Bước Chân",
-              desc: "Ứng dụng theo dõi sức khỏe mobile",
-              link: "https://github.com/Dex-NCuong/appDiemBuocChan",
-              color: "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400",
-            },
-            {
-              name: "Cây Thông Noel",
-              desc: "Project vui giáng sinh",
-              link: "https://github.com/Dex-NCuong/giang_sinh_an_lanh",
-              color: "bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400",
-            },
-          ].map((project, index) => (
-            <a
-              key={project.name}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
+          {projects.map((project, index) => (
+            <Link
+              key={project.id}
+              to={`/project/${project.id}`}
               className="block group bg-white dark:bg-dark-card rounded-xl p-5 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
               data-aos="fade-up"
               data-aos-delay={index * 100}
@@ -229,7 +204,7 @@ const AboutPage: React.FC = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      d="M9 5l7 7-7 7"
                     />
                   </svg>
                 </div>
@@ -238,9 +213,9 @@ const AboutPage: React.FC = () => {
                 {project.name}
               </h3>
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                {project.desc}
+                {project.shortDesc}
               </p>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
@@ -319,6 +294,104 @@ const AboutPage: React.FC = () => {
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+
+      {/* CV Section */}
+      <section data-aos="fade-up">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+          <svg
+            className="w-6 h-6 mr-2 text-primary-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
+          </svg>
+          Hồ sơ cá nhân (CV)
+        </h2>
+        <div className="bg-gradient-to-br from-primary-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 border border-primary-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-start space-x-4">
+              <div className="p-4 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
+                <svg
+                  className="w-8 h-8 text-primary-600 dark:text-primary-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  Tải xuống CV của mình
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 max-w-md">
+                  Xem chi tiết về kinh nghiệm, kỹ năng và thành tích của mình qua CV chuyên nghiệp.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="/Dao-Nhat-Cuong-full stack.pdf"
+                download
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors shadow-md hover:shadow-lg"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                Tải xuống
+              </a>
+              <a
+                href="/Dao-Nhat-Cuong-full stack.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 font-semibold border-2 border-primary-600 dark:border-primary-400 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
+                </svg>
+                Xem online
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

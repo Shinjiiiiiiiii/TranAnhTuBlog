@@ -14,10 +14,21 @@ const HomePage: React.FC = () => {
         className="text-center py-20 px-4 bg-gradient-to-b from-transparent to-gray-50 dark:to-dark-card/30 rounded-3xl mx-4 sm:mx-0"
         data-aos="fade-up"
       >
+        <div className="flex flex-col items-center mb-8" data-aos="fade-up" data-aos-delay="100">
+          <img 
+            src="/avatar.png" 
+            alt="Nhật Cường Dev" 
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-top shadow-lg mb-4"
+          />
+          <p className="text-lg md:text-xl font-medium text-gray-500 dark:text-gray-400 italic">
+            "Kiến tạo giá trị từ những dòng code."
+          </p>
+        </div>
+
         <h1
           className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-6"
           data-aos="fade-up"
-          data-aos-delay="100"
+          data-aos-delay="150"
         >
           Học{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600 animate-gradient">
@@ -25,6 +36,7 @@ const HomePage: React.FC = () => {
           </span>{" "}
           không khó.
         </h1>
+
         <p
           className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8"
           data-aos="fade-up"
