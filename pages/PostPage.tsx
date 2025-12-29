@@ -114,6 +114,15 @@ const PostPage: React.FC = () => {
         </div>
       </div>
 
+      {/* Featured Image */}
+      <div className="mb-12 rounded-3xl overflow-hidden shadow-xl" data-aos="fade-up" data-aos-delay="50">
+        <img
+          src={post.image || "/images/blog/default-post.png"}
+          alt={post.title}
+          className="w-full h-auto max-h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+        />
+      </div>
+
       {/* Content */}
       <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
         <p

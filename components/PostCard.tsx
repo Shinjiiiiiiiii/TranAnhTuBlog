@@ -13,7 +13,16 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
         <span className="sr-only">View Post</span>
       </Link>
       
-      <div className="p-6 flex flex-col h-full z-10 pointer-events-none">
+      <div className="relative h-48 overflow-hidden">
+        <img 
+          src={post.image || "/images/blog/default-post.png"} 
+          alt={post.title} 
+          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+      </div>
+      
+      <div className="p-6 flex flex-col h-full z-10 pointer-events-none relative">
         <div className="flex items-center space-x-4 text-xs text-gray-500 dark:text-gray-400 mb-4">
           <time dateTime={post.date} className="flex items-center">
             <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
