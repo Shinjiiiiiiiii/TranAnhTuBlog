@@ -9,7 +9,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-12-01",
     readTime: "10 phút",
     tags: ["Basic", "Introduction"],
-    image: "/images/blog/post-intro-js.png",
+    image: "/blog-thumbnail.png",
     blocks: [
       {
         type: "heading",
@@ -80,7 +80,7 @@ console.log('Website đã được cập nhật!');`,
     date: "2025-12-03",
     readTime: "12 phút",
     tags: ["Fundamentals", "Variables"],
-    image: "/images/blog/post-variables.png",
+    image: "/blog-thumbnail.png",
     blocks: [
       {
         type: "heading",
@@ -155,7 +155,7 @@ let b = 10;`,
     date: "2025-12-05",
     readTime: "10 phút",
     tags: ["Functions", "ES6"],
-    image: "/images/blog/post-functions.png",
+    image: "/blog-thumbnail.png",
     blocks: [
       {
         type: "paragraph",
@@ -244,7 +244,7 @@ processData("File ảnh", () => {
     date: "2025-12-08",
     readTime: "15 phút",
     tags: ["Data Structures", "ES6"],
-    image: "/images/blog/post-array-object.png",
+    image: "/blog-thumbnail.png",
     blocks: [
       {
         type: "heading",
@@ -335,7 +335,7 @@ const userUpdate = { ...user, age: 21 }; // Copy user cũ và sửa age`,
     date: "2025-12-12",
     readTime: "14 phút",
     tags: ["Async", "Advanced"],
-    image: "/images/blog/post-async-promise.png",
+    image: "/blog-thumbnail.png",
     blocks: [
       {
         type: "heading",
@@ -422,7 +422,7 @@ app();`,
     date: "2025-12-15",
     readTime: "10 phút",
     tags: ["DOM", "Web API"],
-    image: "/images/blog/post-dom.png",
+    image: "/blog-thumbnail.png",
     blocks: [
       {
         type: "heading",
@@ -493,7 +493,7 @@ newDiv.remove();`,
     date: "2025-12-15",
     readTime: "15 phút",
     tags: ["Deep Dive", "Concept"],
-    image: "/images/blog/post-event-loop.png",
+    image: "/blog-thumbnail.png",
     blocks: [
       {
         type: "heading",
@@ -555,7 +555,7 @@ document.querySelector('#parent').addEventListener('click', () => {
     date: "2025-12-21",
     readTime: "8 phút",
     tags: ["Modern JS", "Tips"],
-    image: "/images/blog/post-es6-plus.png",
+    image: "/blog-thumbnail.png",
     blocks: [
       {
         type: "heading",
@@ -624,7 +624,7 @@ const html = \`
     date: "2025-12-25",
     readTime: "10 phút",
     tags: ["Career", "Roadmap"],
-    image: "/images/blog/post-roadmap.png",
+    image: "/blog-thumbnail.png",
     blocks: [
       {
         type: "heading",

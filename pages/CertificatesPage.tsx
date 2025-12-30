@@ -11,7 +11,7 @@ interface Certificate {
 }
 
 const CertificatesPage: React.FC = () => {
-  usePageTitle("Chứng chỉ & Thành tựu | Nhật Cường Dev");
+  usePageTitle("Chứng chỉ & Thành tựu | Trần Anh Tú");
 
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
 
@@ -28,7 +28,7 @@ const CertificatesPage: React.FC = () => {
         "RegExp & Math Object",
       ],
       gradient: "from-yellow-400 to-yellow-600",
-      imageUrl: "images/JavaScriptEssentials2Update20251223-33-a272z5.pdf",
+      imageUrl: "ảnh/JavaScriptEssentials2Update20251230-31-rf55on.pdf",
     },
     {
       title: "JavaScript Essentials 1",
@@ -42,7 +42,7 @@ const CertificatesPage: React.FC = () => {
         "Basic Algorithms",
       ],
       gradient: "from-yellow-300 to-yellow-500",
-      imageUrl: "images/JavaScriptEssentials1Update20251223-30-90xqcp.pdf",
+      imageUrl: "ảnh/JavaScriptEssentials1Update20251230-32-r6hl23.pdf",
     },
     {
       title: "Networking Basics",
@@ -56,21 +56,7 @@ const CertificatesPage: React.FC = () => {
         "Connectivity Troubleshooting",
       ],
       gradient: "from-blue-400 to-blue-600",
-      imageUrl: "images/NetworkingBasicsUpdate20251223-30-icyj5m.pdf",
-    },
-    {
-      title: "Introduction to Cybersecurity",
-      issuer: "Cisco Networking Academy",
-      date: "Nov 23, 2024",
-      skills: [
-        "Cyber Threats & Attacks",
-        "Online Safety",
-        "Vulnerability Management",
-        "Data Protection",
-        "Career Options",
-      ],
-      gradient: "from-green-400 to-green-600",
-      imageUrl: "images/I2CSUpdate20251223-30-y6ls0n.pdf",
+      imageUrl: "ảnh/NetworkingBasicsUpdate20251230-31-yypi0u.pdf",
     },
   ];
 
@@ -96,24 +82,20 @@ const CertificatesPage: React.FC = () => {
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            {/* Top Decoration */}
-            <div
-              className={`h-2 w-full bg-gradient-to-r ${cert.gradient}`}
-            ></div>
+            {/* PDF Thumbnail Preview */}
+            <div className="relative h-48 w-full bg-gray-100 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-800 overflow-hidden group-hover:opacity-90 transition-opacity">
+              <iframe
+                src={`${cert.imageUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+                className="w-[150%] h-[150%] transform scale-[0.67] origin-top-left border-none pointer-events-none"
+                title={`Thumbnail for ${cert.title}`}
+                tabIndex={-1}
+              />
+              {/* Overlay to capture clicks and prevent iframe interaction */}
+              <div className="absolute inset-0 bg-transparent" />
 
-            <div className="p-8 flex flex-col h-full">
-              <div className="flex justify-between items-start mb-6">
-                <div className="bg-gray-50 dark:bg-gray-800/50 p-3 rounded-xl shadow-inner">
-                  {/* Generic Icon based on issuer content roughly */}
-                  {cert.issuer.includes("JS") ? (
-                    <span className="text-3xl">⚡</span>
-                  ) : cert.issuer.includes("Cyber") ? (
-                    <span className="text-3xl">🛡️</span>
-                  ) : (
-                    <span className="text-3xl">🌐</span>
-                  )}
-                </div>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 uppercase tracking-wide">
+              {/* Verified Badge */}
+              <div className="absolute top-4 right-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-white/90 text-green-800 dark:bg-black/50 dark:text-green-300 uppercase tracking-wide backdrop-blur-sm shadow-sm">
                   <svg
                     className="w-3 h-3 mr-1"
                     fill="currentColor"
@@ -128,6 +110,9 @@ const CertificatesPage: React.FC = () => {
                   Verified
                 </span>
               </div>
+            </div>
+
+            <div className="p-6 flex flex-col h-full">
 
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                 {cert.title}

@@ -4,7 +4,7 @@ import { blogPosts } from "../data/posts";
 import usePageTitle from "../hooks/usePageTitle";
 
 const BlogPage: React.FC = () => {
-  usePageTitle("Blog | Nhật Cường Dev");
+  usePageTitle("Blog");
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 animate-fade-in">

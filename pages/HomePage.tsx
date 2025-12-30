@@ -5,7 +5,7 @@ import { blogPosts } from "../data/posts";
 import usePageTitle from "../hooks/usePageTitle";
 
 const HomePage: React.FC = () => {
-  usePageTitle("Nhật Cường Dev | JavaScript Tech Blog");
+  usePageTitle("JavaScript Tech Blog");
 
   return (
     <div className="space-y-12 animate-fade-in">
@@ -15,13 +15,13 @@ const HomePage: React.FC = () => {
         data-aos="fade-up"
       >
         <div className="flex flex-col items-center mb-8" data-aos="fade-up" data-aos-delay="100">
-          <img 
-            src="/avatar.png" 
-            alt="Nhật Cường Dev" 
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-top shadow-lg mb-4"
+          <img
+            src="/avatar.jpg"
+            alt="Avatar"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover object-top shadow-lg mb-4"
           />
-          <p className="text-lg md:text-xl font-medium text-gray-500 dark:text-gray-400 italic">
-            "Kiến tạo giá trị từ những dòng code."
+          <p className="text-xl md:text-3xl font-medium text-gray-500 dark:text-gray-400 italic">
+            "Máy tính ra đời để giải quyết những vấn đề chưa từng xảy ra"
           </p>
         </div>
 
@@ -30,25 +30,7 @@ const HomePage: React.FC = () => {
           data-aos="fade-up"
           data-aos-delay="150"
         >
-          Học{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600 animate-gradient">
-            JavaScript
-          </span>{" "}
-          không khó.
         </h1>
-
-        <p
-          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          Chào bạn, mình là{" "}
-          <span className="font-semibold text-gray-900 dark:text-white">
-            Nhật Cường Dev
-          </span>
-          . Blog này là nơi mình chia sẻ những kinh nghiệm thực chiến về JS,
-          giúp bạn đi từ Zero đến Hero.
-        </p>
         <div
           className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4"
           data-aos="fade-up"

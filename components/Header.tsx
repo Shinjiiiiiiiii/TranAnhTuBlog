@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme }) => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center group">
             <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white group-hover:text-primary-600 transition-colors">
-              Nhật Cường Dev
+              Home
             </span>
           </Link>
 
